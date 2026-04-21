@@ -24,7 +24,7 @@ const show = (id) => {
     }
 };
 
-const words = ["Penguins184.", "a Developer.", "a Tinkerer.", "a Minecrafter.", "a Homelabber."];
+const words = ["Penguins184.", "a Developer.", "a Tinkerer.", "a Minecrafter.", "a Self-hoster.", "a Pianist."];
 let index = 0;
 let char = 0;
 let deleting = false;
@@ -57,19 +57,15 @@ const type = () => {
 type();
 
 const quotes = [
-    "It needs a little more spice. Maybe a little paprika?\n- Tokita, Paprika (2006)",
-    "See this is why I hate you\n- Hackerdude (31/12/2025)",
-    "No! No way! Come on! I'm going to die right here and now! I want to die with you guys!\n- Kamome, Paranoia Agent (2004)",
-    "Kira is childish and hates losing... I'm also childish and hate losing\n- L, Death Note (2006)",
-    "Why are you such a nerdy nerd?\n- ShamanNS (12/10/2025)",
-    "Micheal65536 started a thread: fuck I created a thread again. See all threads.\n- 23/03/2026",
-    "Hey, Vsauce! Michael here.\n- Michael Stevens",
-    "Do you have any yuri?\n- Hackerdude (07/04/2026)",
-    "It ain't age that matters\n- Elaine Roberts (15/04/2026)",
-    "Unc orders you to spell\n- hhhhhhhhh (25/09/2025)",
-    "Philosophy is basically thinking about thinking, which sounds like a waste of time, because it is...\n- Philomena Cunk (2022)",
-    "I GOTTA get KPM working\n- Hackerude (who did not get KPM working)",
-    "Talk is cheap, send patches.\n- FFMPEG (28/02/2024)"
+    "It needs a little more spice. Maybe a little paprika? - Tokita, Paprika (2006)",
+    "See this is why I hate you - Hackerdude (2025)",
+    "No! No way! Come on! I'm going to die right here and now! I want to die with you guys! - Kamome, Paranoia Agent (2004)",
+    "Kira is childish and hates losing... I'm also childish and hate losing - L, Death Note (2006)",
+    "Why are you such a nerdy nerd? - ShamanNS (2025)",
+    "Hey, Vsauce! Michael here. - Michael Stevens (Daily)",
+    "Philosophy is basically thinking about thinking, which sounds like a waste of time, because it is... - Philomena Cunk (2022)",
+    "Talk is cheap, send patches. - FFMPEG (2024)",
+    "HOW the hell is KPFM increased my binary size by 10 mb - Huckle (2026)"
 ];
 
 document.querySelector("#Quote").innerHTML = quotes[Math.floor(Math.random() * quotes.length)];

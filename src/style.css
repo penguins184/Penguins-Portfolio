@@ -59,10 +59,7 @@ body {
         align-items: center;
         height: 100%;
         margin-right: 10px;
-        cursor: pointer;
     }
-    .right > span:hover { background-color: #000;
-         color: #fff; }
 }
 
 @keyframes fade {
