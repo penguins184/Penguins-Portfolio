@@ -65,7 +65,7 @@ const quotes = [
     "Hey, Vsauce! Michael here. - Michael Stevens (Daily)",
     "Philosophy is basically thinking about thinking, which sounds like a waste of time, because it is... - Philomena Cunk (2022)",
     "Talk is cheap, send patches. - FFMPEG (2024)",
-    "HOW the hell is KPFM increased my binary size by 10 mb - Huckle (2026)"
+    "How the hell has your package manager increased my binary size by 10Mb? - Huckle (2026)"
 ];
 
 document.querySelector("#Quote").innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
