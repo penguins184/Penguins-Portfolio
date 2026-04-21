@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Penguins184 | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="left">
+            <span id="Help">?</span>
+            <span onclick="document.location=`https://discord.com/users/672901450812096515`;">Discord</span>
+            <span onclick="document.location=`https://github.com/penguins184`;">Github</span>
+        </div>
+
+        <div class="right">
+            <span id="Time">00:00</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="window" id="Main">
+            <div class="header">
+                <div class="title">
+                    <span>penguins184</span>
+                </div>
+            </div>
+
+            <h1>Hi, I'm <span id="typewriter">Penguins184.</span><span class="cursor">|</span></h1>
+
+            <div class="penguins">
+                <img src="/assets/penguin1.png">
+                <img src="/assets/penguin2.png">
+                <img src="/assets/penguin3.png">
+                <img src="/assets/penguin4.png">
+            </div>
+
+            <hr>
+
+            <p><b>Interests:</b> Coding, Minecraft, Kindles</p>
+            <p><b>Stack:</b> Plain HTML/CSS/JS, Hugo, AlpineJS</p>
+            <p class="status"><b>Status:</b> <span class="pling"></span> <span id="Mood">...</span></p>
+            <p><b>DNI:</b> Hackerdude, Fynn, ShamanNS</p>
+            <p><b>Notable Projects:</b> KindleForge, MiNERVA Frontend, Illusion, SpringBreak</p>
+            <p><b>Quote of The Day:</b> <i id="Quote">...</i></p>
+
+            <div class="actions">
+                <button onclick="document.location=`https://ko-fi.com/penguins186`;">DONATE</button>
+                <button onclick="show(`Guestbook`);">GUESTBOOK</button>
+                <button onclick="show(`Credits`);">CREDITS</button>
+            </div>
+        </div>
+
+        <div class="window hidden" id="Guestbook">
+             <div class="header">
+                <div class="title">
+                    <span>Guestbook</span>
+                </div>
+            </div>
+
+            <h1>Guestbook</h1>
+            <div id="Messages"></div>
+            <p><span id="Status">Waiting...</span> <span style="cursor: pointer;" onclick="load();"><u>Load More</u></span></p>
+
+            <div class="bar">
+                <input id="name" class="long" type="text" placeholder="My Name..." maxlength="12"> 
+                <input id="message" class="long" type="text" placeholder="My Message..." maxlength="48"> 
+                <button onclick="message();">Send</button>
+            </div>
+            <button class="long" onclick="show(`Main`);">BACK</button>
+        </div>
+
+        <div class="window hidden" id="Credits">
+             <div class="header">
+                <div class="title">
+                    <span>Credits</span>
+                </div>
+            </div>
+
+            <h1>Credits</h1>
+
+            <p>1. <a href="https://legends-games.itch.io/pixel-penguin-32x32-asset-pack">Legend Games</a>, Penguin Icons</p>
+            <p>2. Me (I'm Wonderful)</p>
+            <p>3. <span style="font-size: 5px;">not</span> Hackerdude</p>
+            <p>4. Jeeves (Very Jeevy)</p>
+            <p>5. Thilo 'Finn' Jäggi, SSN 58271, 52 Appenzellerland, Switzerland</p>
+            <p>6. My IRLs (You Know Who You Are)</p>
+            <p>7. Huckle (The One Who Chuckle)</p>
+
+            <button class="long" onclick="show(`Main`);">BACK</button>
+        </div>
+    </div>
+</body>
+</html>
