@@ -10,7 +10,7 @@ update(); //Instant
 setInterval(update, 1000);
 
 const mood = document.querySelector("#Mood");
-const moods = ["Bored", "Excited", "Drippy", "Pissed Off", "Dead"];
+const moods = ["Bored", "Excited", "Drippy", "Pissed Off", "Dead", "Crazy", "Distracted"];
 
 mood.textContent = moods[Math.floor(Math.random() * moods.length)];
 
@@ -57,15 +57,15 @@ const type = () => {
 type();
 
 const quotes = [
-    "It needs a little more spice. Maybe a little paprika? - Tokita, Paprika (2006)",
-    "See this is why I hate you - Hackerdude (2025)",
-    "No! No way! Come on! I'm going to die right here and now! I want to die with you guys! - Kamome, Paranoia Agent (2004)",
-    "Kira is childish and hates losing... I'm also childish and hate losing - L, Death Note (2006)",
-    "Why are you such a nerdy nerd? - ShamanNS (2025)",
-    "Hey, Vsauce! Michael here. - Michael Stevens (Daily)",
-    "Philosophy is basically thinking about thinking, which sounds like a waste of time, because it is... - Philomena Cunk (2022)",
-    "Talk is cheap, send patches. - FFMPEG (2024)",
-    "How the hell has your package manager increased my binary size by 10Mb? - Huckle (2026)"
+    "It needs a little more spice. Maybe a little paprika? <br><br>- Tokita, Paprika (2006)",
+    "See this is why I hate you <br><br>- Hackerdude (2025)",
+    "No! No way! Come on! I'm going to die right here and now! I want to die with you guys! <br><br>- Kamome, Paranoia Agent (2004)",
+    "Kira is childish and hates losing... I'm also childish and hate losing <br><br>- L, Death Note (2006)",
+    "Why are you such a nerdy nerd? <br><br>- ShamanNS (2025)",
+    "Hey, Vsauce! Michael here. <br><br>- Michael Stevens (Daily)",
+    "Philosophy is basically thinking about thinking, which sounds like a waste of time, because it is... <br><br>- Philomena Cunk (2022)",
+    "Talk is cheap, send patches. <br><br>- FFMPEG (2024)",
+    "How the hell has your package manager increased my binary size by 10Mb? <br><br>- Huckle (2026)"
 ];
 
 document.querySelector("#Quote").innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
@@ -117,7 +117,7 @@ const message = async () => {
 
     if(data.success) {
         guestbook(loaded);
-        document.querySelector("#name").value = ""; document.querySelector("#message").value = ""; //Reset
+        document.querySelector("#message").value = ""; //Reset
 
         //Feedback
         status("Message Sent!", "green");

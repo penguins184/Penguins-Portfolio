@@ -203,6 +203,11 @@ body {
             }
         }
 
+        .quote {
+            border-left: 3px gray solid;
+            margin-left: 15px;
+        }
+
         button, input {
             font-family: "Chicago", monospace;
             margin-left: 15px;
