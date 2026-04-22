@@ -10,6 +10,17 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("src"));
 
+app.use((e, req, res, next) => {
+    if (e instanceof SyntaxError && err.status === 400 && "body" in e) {
+        return res.status(400).json({ error: "Invalid JSON Format!" });
+    }
+    next();
+});
+
+app.use((req, res) => {
+    res.status(404).sendFile(process.cwd() + "/src/404.html");
+});
+
 //Initialise
 const matcher = new RegExpMatcher({
 	...englishDataset.build(),
@@ -34,6 +45,7 @@ app.post("/guestbook", limiter, async (req, res) => { //Add Entry
         const { author, message } = req.body;
 
         //Checks
+        if(!typeof author === "string" || !typeof message === "string") return res.status(400).json({ error: "Invalid Datatype!" });
         if (!author || !message) return res.status(400).json({ error: "Missing Fields!" });
         if (!author.trim() || !message.trim()) return res.status(400).json({ error: "Empty Content!" });
         if (author.length > 12 || message.length > 48) return res.status(400).json({ error: "Author/Message Too Long!" });
