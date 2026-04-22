@@ -17,10 +17,6 @@ app.use((e, req, res, next) => {
     next();
 });
 
-app.use((req, res) => {
-    res.status(404).sendFile(process.cwd() + "/src/404.html");
-});
-
 //Initialise
 const matcher = new RegExpMatcher({
 	...englishDataset.build(),
@@ -84,6 +80,10 @@ app.get("/guestbook", async (req, res) => { //Retrieve Entries
 
 app.get("/", async (req, res) => {
     res.sendFile(process.cwd() + "/src/index.html");
+});
+
+app.use((req, res) => {
+    res.status(404).sendFile(process.cwd() + "/src/404.html");
 });
 
 const port = process.env.PORT || 3000;
