@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.static("src"));
 
 app.use((e, req, res, next) => {
-    if (e instanceof SyntaxError && err.status === 400 && "body" in e) {
+    if (e instanceof SyntaxError && e.status === 400 && "body" in e) {
         return res.status(400).json({ error: "Invalid JSON Format!" });
     }
     next();
@@ -36,16 +36,21 @@ const limiter = rateLimit({ //Standard Stuff
   message: { error: "Rate Limited!" }
 }); 
 
+//Prevent Funky Unicode
+const allowed = /^[a-zA-Z0-9 !@#$%^&*()_+=\-":;,.<>/?`~|£€[\]{}\\']+$/;
 app.post("/guestbook", limiter, async (req, res) => { //Add Entry
     try {
-        const { author, message } = req.body;
+        let { author, message } = req.body;
 
         //Checks
-        if(!typeof author === "string" || !typeof message === "string") return res.status(400).json({ error: "Invalid Datatype!" });
-        if (!author || !message) return res.status(400).json({ error: "Missing Fields!" });
-        if (!author.trim() || !message.trim()) return res.status(400).json({ error: "Empty Content!" });
+        if(typeof author !== "string" || typeof message !== "string") return res.status(400).json({ error: "Invalid Datatype!" });
+        if (!author || !message) return res.status(400).json({ error: "Missing Fields!" }); //Before Trimming - More Descriptive
+
+        author = author.trim().replace(/\s+/g, " "); message = message.trim().replace(/\s+/g, " "); //Frontend Benefits
+        if (!author || !message) return res.status(400).json({ error: "Empty Content!" });
         if (author.length > 12 || message.length > 48) return res.status(400).json({ error: "Author/Message Too Long!" });
         if (matcher.hasMatch(author) || matcher.hasMatch(message)) return res.status(400).json({ error: "Inappropriate Content!" });
+        if (!allowed.test(author) || !allowed.test(message)) return res.status(400).json({ error: "Non-Standard Characters!" });
 
         const entry = {
             id: crypto.randomUUID(),

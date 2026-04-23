@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Penguins184 | Home</title>
+
+    <!-- Make Lighthouse Happy -->
+    <link rel="preload" href="/style.css" as="style">
+    <link rel="preload" href="/assets/chicago.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
@@ -12,6 +16,9 @@
     <meta property="og:description" content="Penguins184's MacOS 4.2 Styled Portfolio" />
     <meta property="og:image" content="/assets/penguin4.png" />
     <meta name="theme-color" content="#ffffff">
+
+    <!-- "SEO" -->
+    <meta name="description" content="Penguins184's Portfolio, A Hobbyist Programmer, Tikerer, and Pianist, with Links, Notices, and Project Information">
 
     <!-- Browser Support Who? -->
     <link rel="icon" type="image/png" sizes="180x180" href="/assets/favicon.png">
@@ -30,7 +37,7 @@
     </div>
 
     <div class="container">
-        <div class="window" id="Main">
+        <div class="window" id="Main"><main>
             <div class="header">
                 <div class="title">
                     <span>Portfolio</span>
@@ -40,10 +47,10 @@
             <h1>Hi, I'm <span id="typewriter">Penguins184.</span><span class="cursor">|</span></h1>
 
             <div class="penguins">
-                <img src="/assets/penguin1.png">
-                <img src="/assets/penguin2.png">
-                <img src="/assets/penguin3.png">
-                <img src="/assets/penguin4.png">
+                <img src="/assets/penguin1.png" alt="Pixel Art Penguin Walking">
+                <img src="/assets/penguin2.png" alt="Pixel Art Penguin Walking 2">
+                <img src="/assets/penguin3.png" alt="Pixel Art Penguin Swimming">
+                <img src="/assets/penguin4.png" alt="Pixel Art Penguin Excited">
             </div>
 
             <hr>
@@ -64,7 +71,7 @@
                 <button onclick="show(`Guestbook`);">GUESTBOOK</button>
                 <button onclick="show(`Credits`);">CREDITS</button>
             </div>
-        </div>
+        </main></div>
 
         <div class="window hidden" id="Guestbook">
              <div class="header">
