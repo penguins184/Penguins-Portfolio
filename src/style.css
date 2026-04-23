@@ -220,6 +220,8 @@ body {
             padding: 10px;
             transition: background-color .4s ease;
             cursor: pointer;
+            color: #000000;
+            -webkit-text-fill-color: #000000;
         }
 
         input { cursor: text; }
