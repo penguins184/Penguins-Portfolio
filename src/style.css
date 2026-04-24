@@ -221,7 +221,6 @@ body {
             transition: background-color .4s ease;
             cursor: pointer;
             color: #000000;
-            -webkit-text-fill-color: #000000;
         }
 
         input { cursor: text; }
@@ -252,7 +251,7 @@ body {
 
         button:hover { 
             background-color: #000; 
-            color: #fff;
+            color: #fff !important;
         }
 
         .actions {
