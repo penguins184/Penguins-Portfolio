@@ -1,0 +1,9 @@
+baseURL = "https://example.org/"
+languageCode = "en-gb"
+title = "Home"
+
+[permalinks]
+  blog = "/blog/:slug/"
+
+[markup.goldmark.renderer]
+  unsafe = true

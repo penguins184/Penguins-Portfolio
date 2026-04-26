@@ -15,6 +15,22 @@ html, body {
     height: 100%;
 }
 
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: underline;
+    transition: color 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: gray;
+    text-decoration: none;
+}
+
 body {
     background-color: #aaaaaa;
     background-image: repeating-linear-gradient(
@@ -45,14 +61,14 @@ body {
         flex-direction: row;
     }
 
-    .left > span {
+    .left > a > span {
         display: flex;
         align-items: center;
         height: 100%;
         margin-left: 10px;
         cursor: pointer;
     }
-    .left > span:hover { background-color: #000;
+    .left > a > span:hover { background-color: #000;
          color: #fff; }
 
     .right > span {
@@ -147,9 +163,20 @@ body {
             }              
         }
 
-        h1 { 
-            font-size: 1.5rem;  
+        h1, h2, h3 { 
             margin: 15px;
+        }
+
+        h1 {
+            font-size: 1.5rem;  
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
         }
 
         .cursor {
@@ -180,6 +207,11 @@ body {
             border-top: 1px solid #000;
             width: 95%;             
             margin: 10px auto;      
+        }
+
+        .small {
+            color: gray;
+            font-size: 0.8rem;
         }
 
         p {

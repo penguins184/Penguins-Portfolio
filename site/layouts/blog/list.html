@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Penguins184 | {{ .Title }}</title>
+
+    <!-- Make Lighthouse Happy -->
+    <link rel="preload" href="/style.css" as="style">
+    <link rel="preload" href="/assets/chicago.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Feel Like SPA -->
+    <link rel="preload" as="script" href="https://unpkg.com/@hotwired/turbo">
+    <script src="https://unpkg.com/@hotwired/turbo" defer></script>
+
+    <!-- OG Tags -->
+    <meta property="og:title" content="Penguins' Blog" />
+    <meta property="og:description" content="A List of Penguins184's Blog Articles" />
+    <meta property="og:image" content="/assets/penguin4.png" />
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- "SEO" -->
+    <meta name="description" content="A List of Penguins184's Blog Articles">
+
+    <!-- Browser Support Who? -->
+    <link rel="icon" type="image/png" sizes="180x180" href="/assets/favicon.png">
+</head>
+<body>
+    <div class="nav">
+        <div class="left">
+            <a href="/"><span>Back</span></a>
+            <a href="https://ko-fi.com/penguins186"><span>Donate</span></a>
+        </div>
+
+        <div class="right">
+            <span id="Time">00:00</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="window" id="Main"><main style="display: flex; flex-direction: column;">
+            <div class="header">
+                <div class="title">
+                    <span>Blog</span>
+                </div>
+            </div>
+
+            <h1>Blog</h1>
+            <ul>
+                {{ range .Pages }}
+                    <p><a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a>: {{ .Params.description }}</p>
+                {{ end }}
+            </ul>
+
+            <a href="/" style="display: flex; margin: 0;"><button class="long" style="flex-grow: 1;">BACK</button></a>
+        </main></div>
+    </div>
+</body>
+</html>

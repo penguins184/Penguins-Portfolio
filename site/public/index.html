@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penguins184 | Home</title>
+
+
+<link rel="preload" href="/style.css" as="style">
+<link rel="preload" href="/assets/chicago.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+
+<link rel="preload" as="script" href="https://unpkg.com/@hotwired/turbo">
+<script src="https://unpkg.com/@hotwired/turbo" defer></script>
+
+
+<meta property="og:title" content="Penguins' Portfolio" />
+<meta property="og:description" content="Penguins184's MacOS 4.2 Styled Portfolio" />
+<meta property="og:image" content="/assets/penguin4.png" />
+<meta name="theme-color" content="#ffffff">
+
+
+<meta name="description" content="Penguins184's Portfolio, A Hobbyist Programmer, Tikerer, and Pianist, with Links, Notices, and Project Information">
+
+
+<link rel="icon" type="image/png" sizes="180x180" href="/assets/favicon.png">
+
+</head>
+<body>
+    
+    <div class="nav">
+        <div class="left">
+            <a href="https://ko-fi.com/penguins186"><span>Donate</span></a>
+            <a href="https://discord.gg/aSG3eMsAsW"><span>Discord</span></a>
+            <a href="https://github.com/penguins184"><span>Github</span></a>
+        </div>
+
+        <div class="right">
+            <span id="Time">00:00</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="window" id="Main"><main>
+            <div class="header">
+                <div class="title">
+                    <span>Portfolio</span>
+                </div>
+            </div>
+
+            <h1>Hi, I'm <span id="typewriter">Penguins184.</span><span class="cursor">|</span></h1>
+
+            <div class="penguins">
+                <img src="/assets/penguin1.png" alt="Pixel Art Penguin Walking">
+                <img src="/assets/penguin2.png" alt="Pixel Art Penguin Walking 2">
+                <img src="/assets/penguin3.png" alt="Pixel Art Penguin Swimming">
+                <img src="/assets/penguin4.png" alt="Pixel Art Penguin Excited">
+            </div>
+
+            <hr>
+
+            <p><b>Interests:</b> Coding, Minecraft, Kindles</p>
+            <p><b>Stack:</b> Plain HTML/CSS/JS, Hugo, AlpineJS</p>
+            <p class="status"><b>Status:</b> <span class="pling"></span> <span id="Mood">...</span></p>
+            <p><b>DNI:</b> Fynn, ShamanNS</p>
+            <p><b>Notable Projects:</b> KindleForge, MiNERVA Frontend, Illusion, SpringBreak</p>
+            <p><b>Quote of The Day:</b></p>
+
+            <div class="quote">
+                <p><i id="Quote">Loading...<br>- ...</i></p>
+            </div>
+
+            <div class="actions">
+                <a href="/blog"><button>BLOG</button></a>
+                <button onclick="show(`Guestbook`);">GUESTBOOK</button>
+                <button onclick="show(`Credits`);">CREDITS</button>
+            </div>
+        </main></div>
+
+        <div class="window hidden" id="Guestbook">
+             <div class="header">
+                <div class="title">
+                    <span>Guestbook</span>
+                </div>
+            </div>
+
+            <h1>Guestbook</h1>
+            <div id="Messages"></div>
+            <p><span id="Status">Waiting...</span> <span class="link" onclick="load();">Load More</span></p>
+
+            <div class="bar">
+                <input id="name" class="long" type="text" placeholder="My Name..." maxlength="12"> 
+                <input id="message" class="long" type="text" placeholder="My Message..." maxlength="48"> 
+                <button onclick="message();">Send</button>
+            </div>
+            <button class="long" onclick="show(`Main`);">BACK</button>
+        </div>
+
+        <div class="window hidden" id="Credits">
+             <div class="header">
+                <div class="title">
+                    <span>Credits</span>
+                </div>
+            </div>
+
+            <h1>Credits</h1>
+
+            <p>1. <a href="https://legends-games.itch.io/pixel-penguin-32x32-asset-pack" class="link">Legend Games</a>, Penguin Icons</p>
+            <p>2. Me (Code, Contents)</p>
+            <p>3. <span style="font-size: 5px;">not</span> Hackerdude (Inspiration)</p>
+            <p>4. My IRLs (You Know Who You Are!)</p>
+
+            <button class="long" onclick="show(`Main`);">BACK</button>
+        </div>
+    </div>
+
+</body>
+</html>

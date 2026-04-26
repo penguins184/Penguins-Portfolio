@@ -8,7 +8,7 @@ import "dotenv/config";
 const app = express(); 
 app.use(express.json());
 app.use(cors());
-app.use(express.static("src"));
+app.use(express.static("site/public"));
 
 app.use((e, req, res, next) => {
     if (e instanceof SyntaxError && e.status === 400 && "body" in e) {
@@ -84,11 +84,11 @@ app.get("/guestbook", async (req, res) => { //Retrieve Entries
 });
 
 app.get("/", async (req, res) => {
-    res.sendFile(process.cwd() + "/src/index.html");
+    res.sendFile(process.cwd() + "/site/public/index.html");
 });
 
 app.use((req, res) => {
-    res.status(404).sendFile(process.cwd() + "/src/404.html");
+    res.status(404).sendFile(process.cwd() + "/site/public/404.html");
 });
 
 const port = process.env.PORT || 3000;
