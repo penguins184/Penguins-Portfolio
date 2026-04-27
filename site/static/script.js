@@ -52,11 +52,6 @@ const home = () => {
 };
 
 home();
-document.addEventListener("turbo:render", () => {
-    if (window.location.pathname === "/") {
-        home();
-    }
-});
 
 const show = (id) => {
     const windows = document.querySelectorAll(".window");
@@ -129,3 +124,10 @@ const load = () => {
     loaded += 5;
     guestbook(loaded);
 };
+
+document.addEventListener("turbo:render", () => {
+    if (window.location.pathname === "/") {
+        home();
+        guestbook();
+    }
+});
