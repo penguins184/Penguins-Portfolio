@@ -1,4 +1,5 @@
-baseURL = "https://example.org/"
+baseURL = "/"
+relativeURLs = true
 languageCode = "en-gb"
 title = "Home"
 
@@ -7,3 +8,8 @@ title = "Home"
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[markup]
+  [markup.highlight]
+    style = "catppuccin-latte"
+    lineNos = true

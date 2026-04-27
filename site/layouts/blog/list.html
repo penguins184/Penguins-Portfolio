@@ -9,6 +9,7 @@
     <link rel="preload" href="/style.css" as="style">
     <link rel="preload" href="/assets/chicago.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
+    <script src="/assets/global.js" defer></script>
 
     <!-- Feel Like SPA -->
     <link rel="preload" as="script" href="https://unpkg.com/@hotwired/turbo">
@@ -47,10 +48,19 @@
             </div>
 
             <h1>Blog</h1>
-            <ul>
+            <div class="cards">
                 {{ range .Pages }}
-                    <p><a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a>: {{ .Params.description }}</p>
+                    <a href="{{ .Permalink }}">
+                        <div class="card">
+                            <h2>{{ .Title }}</h2>
+                            <p class="small">{{ .Date }}</p>
+                            <p>{{ .Params.description }}</p>
+                        </div>
+                    </a>
                 {{ end }}
+            </div>
+            <ul>
+                
             </ul>
 
             <a href="/" style="display: flex; margin: 0;"><button class="long" style="flex-grow: 1;">BACK</button></a>

@@ -1,15 +1,4 @@
 const home = () => {
-    const time = document.querySelector("#Time");
-    const update = () => {
-        const now = new Date();
-        const str = `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`;
-
-        time.textContent = str;
-    };
-
-    update(); //Instant
-    setInterval(update, 1000);
-
     const mood = document.querySelector("#Mood");
     const moods = ["Bored", "Excited", "Drippy", "Pissed Off", "Dead", "Crazy", "Distracted"];
 
