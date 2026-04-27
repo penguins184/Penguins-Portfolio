@@ -217,7 +217,9 @@ body {
         p, pre:not(:has(code[data-lang])) {
             padding: 0 15px; 
             margin-bottom: 6px;
-            word-wrap: break-word;
+            word-wrap: break-word;     
+            overflow-wrap: break-word;  
+            white-space: normal;
         }
 
         pre > p { /* Hugo Quotes. Why. */
@@ -324,6 +326,7 @@ body {
         /* Hugo Codeblocks */
         div[class="highlight"] {
             margin: 15px;
+            overflow-x: auto;
         }
 
         pre:has(code[data-lang]), pre:has(> code > span) { /* Quotation Conflicts... */
@@ -332,6 +335,12 @@ body {
 
         code {
             font-family: "Chicago", monospace;
+            display: block;
+        }
+
+        .highlight td:last-child {
+            background-color: #eff1f5 !important;
+            width: 100%;
         }
 
         table {
