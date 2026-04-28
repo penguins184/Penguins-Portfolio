@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://penguins184.xyz/sitemap.xml

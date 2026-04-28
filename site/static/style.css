@@ -20,13 +20,13 @@ a {
     cursor: pointer;
 }
 
-.link {
+.link, article > p > a {
     text-decoration: underline;
     transition: color 0.1s ease-in-out;
     cursor: pointer;
 }
 
-.link:hover {
+.link:hover, article > p > a:hover {
     color: gray;
     text-decoration: none;
 }
@@ -167,6 +167,7 @@ body {
             margin: 15px;
         }
 
+        /* Hugo, Articles */
         h1 {
             font-size: 1.5rem;  
         }
@@ -214,6 +215,7 @@ body {
             font-size: 0.8rem;
         }
 
+        /* Also Hugo Stuff */
         p, pre:not(:has(code[data-lang])) {
             padding: 0 15px; 
             margin-bottom: 6px;
@@ -301,6 +303,12 @@ body {
             flex-wrap: wrap;
         }
 
+        /*
+            Hugo Styles Begin Here!
+            This Is A Bit Awkward...
+
+            Good Luck!
+        */
         .card {
             background-color: #eff1f5;
             border: 2px solid #000;
@@ -338,6 +346,13 @@ body {
             display: block;
         }
 
+        code:not(pre code):not(.highlight code):not(:has([data-lang])):not(:has([data-quote])) { /* Inline Code */
+            display: inline;
+            background-color: #eff1f5;
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+
         .highlight td:last-child {
             background-color: #eff1f5 !important;
             width: 100%;
@@ -362,6 +377,20 @@ body {
         td {
             border: 1px solid #000;
             padding: 5px 10px;
+        }
+
+        /* Paragraphs */
+        article > p:not(.small):not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
         }
     }
 }

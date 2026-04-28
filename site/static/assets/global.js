@@ -1,12 +1,15 @@
-const update = () => {
-    const time = document.querySelector("#Time");
-    if (!time) return;
+(() => {
+    const update = () => {
+        const time = document.querySelector("#Time");
+        if (!time) return;
+        const now = new Date();
+        time.textContent = `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`;
+    };
 
-    const now = new Date();
-    time.textContent = `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`;
-};
+    if (!window.interval) {
+        setInterval(update, 1000);
+        window.interval = true;
+    }
 
-setInterval(update, 1000);
-document.addEventListener("turbo:load", () => {
-    update();
-});
+    document.addEventListener("turbo:load", update);
+})();

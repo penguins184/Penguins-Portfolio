@@ -49,7 +49,7 @@
 
             <h1>Blog</h1>
             <div class="cards">
-                {{ range .Pages }}
+                {{ range .RegularPages }}
                     <a href="{{ .Permalink }}">
                         <div class="card">
                             <h2>{{ .Title }}</h2>
