@@ -8,7 +8,12 @@
     <!-- Make Lighthouse Happy -->
     <link rel="preload" href="/style.css" as="style">
     <link rel="preload" href="/assets/chicago.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/assets/global.js" defer></script>
+
+    <!-- Feel Like SPA -->
+    <link rel="preload" as="script" href="https://unpkg.com/@hotwired/turbo">
+    <script src="https://unpkg.com/@hotwired/turbo" defer></script>
 
     <!-- OG Tags -->
     <meta property="og:title" content="Penguins' Portfolio" />
@@ -25,9 +30,9 @@
 <body>
     <div class="nav">
         <div class="left">
-            <span onclick="document.location=`https://www.youtube.com/watch?v=iik25wqIuFo`;">?</span>
-            <span onclick="document.location=`https://discord.gg/aSG3eMsAsW`;">Discord</span>
-            <span onclick="document.location=`https://github.com/penguins184`;">Github</span>
+            <a href="https://ko-fi.com/penguins186"><span>Donate</span></a>
+            <a href="https://discord.gg/aSG3eMsAsW"><span>Discord</span></a>
+            <a href="https://github.com/penguins184"><span>Github</span></a>
         </div>
 
         <div class="right">
@@ -55,7 +60,7 @@
             <hr>
 
             <p>It seems you're a bit <i>lost...</i></p>
-            <p>Care to return to the <u style="cursor: pointer;" onclick="window.location=`/`;">Home Page</u>?</p>
+            <p>Care to return to the <a href="/" class="link">Home Page</a>?</p>
         </div>
     </div>
 </body>
